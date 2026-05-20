@@ -3,6 +3,7 @@ CREATE DATABASE IF NOT EXISTS gestion_formations
 
 USE gestion_formations;
 
+
 CREATE TABLE IF NOT EXISTS admins (
   id       INT AUTO_INCREMENT PRIMARY KEY,
   nom      VARCHAR(100) NOT NULL,
@@ -23,7 +24,6 @@ CREATE TABLE IF NOT EXISTS etudiants (
   created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
-
 CREATE TABLE IF NOT EXISTS formations (
   id    INT AUTO_INCREMENT PRIMARY KEY,
   titre VARCHAR(200) NOT NULL,
@@ -43,7 +43,6 @@ CREATE TABLE IF NOT EXISTS inscriptions (
 );
 
 
-
 INSERT INTO admins (nom, email, password) VALUES
   ('Administrateur', 'admin@formations.ma',
    '$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhu2');
@@ -55,5 +54,4 @@ INSERT INTO formations (titre, duree) VALUES
   ('DevOps & Cloud',                  '3 mois'),
   ('Cybersécurité',                   '5 mois'),
   ('Mobile React Native',             '3 mois');
-
 
