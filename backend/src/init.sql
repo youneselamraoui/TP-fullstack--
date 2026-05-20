@@ -1,0 +1,16 @@
+CREATE TABLE IF NOT EXISTS student (
+    id SERIAL PRIMARY KEY,
+    nom VARCHAR(100) NOT NULL,
+    prenom VARCHAR(100) NOT NULL,
+    telephone VARCHAR(20),
+    email VARCHAR(100) UNIQUE
+);
+
+CREATE TABLE IF NOT EXISTS Professor (
+    id SERIAL PRIMARY KEY,
+    nom VARCHAR(100) NOT NULL,
+    prenom VARCHAR(100) NOT NULL,
+    telephone VARCHAR(20),
+    email VARCHAR(100) UNIQUE
+);
+
